@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import { Main } from "./Main";
+// import { Login } from "../features/auth/ui/Login/Login";
+// import { Page404 } from "common/components";
+// import { useAuth } from "../features/auth/hooks/useAuth"; // Хук для проверки авторизации
+import Main from "components/Main/Main";
+import NavBar from "components/NavBar/NavBar";
+import "./App.css";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <NavBar />
+      <Main />
     </div>
   );
-}
-
-export default App;
+};

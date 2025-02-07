@@ -1,0 +1,13 @@
+/* src/styles/Main.css */
+.main {
+  flex-grow: 1; /* Занимает всё оставшееся пространство */
+  background-color: #ffffff; /* Цвет фона */
+  padding: 16px;
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.main_title {
+  margin: 0; /* Убираем стандартный отступ заголовка */
+  font-size: 18px;
+  color: #555;
+}

@@ -24,6 +24,7 @@
   color: white;
 }
 
+
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +36,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.app-container {
+  display: flex; /* Включаем Flexbox */
+  height: 100vh; /* Занимает всю высоту viewport */
 }

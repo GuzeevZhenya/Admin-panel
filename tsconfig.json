@@ -1,26 +1,35 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    // Базовая конфигурация
+    "target": "ESNext", // Целевой уровень ECMAScript (ESNext для современных браузеров)
+    "lib": ["DOM", "ESNext"], // Типы, которые будут доступны в проекте
+    "module": "ESNext", // Модульная система (ESNext для современных инструментов сборки)
+    "moduleResolution": "Node", // Разрешение модулей через Node.js (рекомендуется для большинства проектов)
+
+    // Пути и включение файлов
+    "baseUrl": "./src", // Базовая директория для импорта модулей
+    "paths": {}, // Настройка алиасов (если нужны)
+
+    // Строгие проверки типов
+    "strict": true, // Включает все строгие проверки типов
+    "noImplicitAny": true, // Запрещает неявное использование типа any
+    "strictNullChecks": true, // Включает строгие проверки null и undefined
+    "noUnusedLocals": true, // Предупреждает о неиспользуемых локальных переменных
+    "noUnusedParameters": true, // Предупреждает о неиспользуемых параметрах функций
+    "noFallthroughCasesInSwitch": true, // Предупреждает о непреднамеренном падении через case в switch
+
+    // Поддержка JSX
+    "jsx": "react-jsx", // Поддержка JSX (для React)
+    "allowJs": true, // Разрешает импорт JavaScript-файлов
+    "esModuleInterop": true, // Включает совместимость с ES6 модулями
+    "skipLibCheck": true, // Пропускает проверку типов в библиотеках (ускоряет компиляцию)
+    "forceConsistentCasingInFileNames": true // Требует согласованного регистра в именах файлов
+
+    // Дополнительные настройки
+    // "isolatedModules": true, // Если используете ESM-only инструменты (например, Vite)
+    // "incremental": true, // Включает инкрементальную компиляцию
+    // "sourceMap": true // Генерирует source maps для отладки
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src/**/*"], // Включает все файлы в папке src
+  "exclude": ["node_modules", "dist", "build"] // Исключает указанные папки
 }

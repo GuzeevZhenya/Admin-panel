@@ -1,5 +1,5 @@
-// src/components/Navbar.tsx
 import { useState } from "react";
+import { NavLink } from "react-router-dom"; // Импортируем NavLink
 import "./../../styles/NavBar.css"; // Импортируем стили
 
 const Navbar = () => {
@@ -9,7 +9,9 @@ const Navbar = () => {
     <div className="navbar">
       {/* Раздел 1: Логотип и колокольчик */}
       <div className="navbar_header">
-        <div className="logo">Redev Admin</div>
+        <div className="logo">
+          R | <span className="logo_text">R E D E V</span>
+        </div>
         <div className="notifications">
           <span className="bell">🔔</span>
           <span className="notification_count">5</span>
@@ -31,28 +33,68 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Подменю с двумя ссылками */}
+        {/* Подменю с двумя ссылками (используем NavLink) */}
         {isUsersMenuOpen && (
           <div className="submenu">
-            <a href="#modules" className="submenu_item">
+            <NavLink
+              to="/modules" // Путь к странице модулей
+              className={({ isActive }) =>
+                isActive ? "submenu_item active" : "submenu_item"
+              }
+            >
               Модули
-            </a>
-            <a href="#theory" className="submenu_item">
+            </NavLink>
+            <NavLink
+              to="/theory" // Путь к странице теории
+              className={({ isActive }) =>
+                isActive ? "submenu_item active" : "submenu_item"
+              }
+            >
               Теория
-            </a>
+            </NavLink>
           </div>
         )}
 
-        {/* Остальные ссылки */}
-        <div className="menu_item">Модули</div>
-        <div className="menu_item">Теория</div>
-        <div className="menu_item">Задачи</div>
-        <div className="menu_item">Чек лист</div>
+        {/* Остальные ссылки (теперь через NavLink) */}
+        <NavLink
+          to="/modules" // Путь к странице модулей
+          className={({ isActive }) =>
+            isActive ? "menu_item active" : "menu_item"
+          }
+        >
+          Модули
+        </NavLink>
+        <NavLink
+          to="/theory" // Путь к странице теории
+          className={({ isActive }) =>
+            isActive ? "menu_item active" : "menu_item"
+          }
+        >
+          Теория
+        </NavLink>
+        <NavLink
+          to="/tasks" // Путь к странице задач
+          className={({ isActive }) =>
+            isActive ? "menu_item active" : "menu_item"
+          }
+        >
+          Задачи
+        </NavLink>
+        <NavLink
+          to="/checklist" // Путь к странице чек-листа
+          className={({ isActive }) =>
+            isActive ? "menu_item active" : "menu_item"
+          }
+        >
+          Чек лист
+        </NavLink>
       </div>
 
       {/* Раздел 3: Кнопка выхода */}
       <div className="navbar_footer">
-        <button className="logout_button">Выход</button>
+        <button className="logout_button">
+          <span className="logout_icon">🚪</span> Выйти
+        </button>
       </div>
     </div>
   );

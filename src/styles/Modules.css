@@ -1,0 +1,154 @@
+/* Общий контейнер */
+.modules-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Заголовок и кнопка */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .add-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Модальное окно */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content h3 {
+    margin-bottom: 15px;
+  }
+  
+  .modal-content input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .color-picker label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .color-options {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  
+  .color-option {
+    width: 20px;
+    height: 20px;
+    
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .color-option .selected {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .confirm-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirm-button:hover {
+    background-color: #45a049;
+  }
+  
+  .cancel-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Список модулей */
+  .modules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .module-card {
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .module-info h4 {
+    margin: 0;
+  }
+  
+  .module-actions button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .module-actions button:hover {
+    text-decoration: underline;
+  }
